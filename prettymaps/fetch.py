@@ -47,8 +47,8 @@ def get_geometries(perimeter = None, point = None, radius = None, tags = {}, per
         geometries = ox.project_gdf(geometries)
 
     # Intersect with perimeter
-    #geometries = geometries.intersection(perimeter)
-    geometries = geometries.intersection(perimeter).buffer(0)
+    geometries = geometries.intersection(perimeter)
+    #geometries = geometries.intersection(perimeter).buffer(0)
     #geometries = [geo.intersection(perimeter).buffer(0) for geo in geometries.geometry]
 
     if union:
